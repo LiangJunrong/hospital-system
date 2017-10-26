@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>预约登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="hospital" />
+    <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1);
+        } </script>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!--webfonts-->
+    <link href='https://fonts.googleapis.com/css?family=Antic' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700|Six+Caps' rel='stylesheet'
+        type='text/css' />
+    <!--//webfonts-->
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!--light-box-files -->
+    <script src="js/modernizr.custom.97074.js"></script>
+    <script src="js/jquery.chocolat.js"></script>
+    <link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+
+    <script type="text/javascript" charset="utf-8">
+        $(function () {
+            $('.g-left a').Chocolat();
+        });
+    </script>
+    <!--light-box-files -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+			};
+			*/
+            $().UItoTop({ easingType: 'easeOutQuart' });
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- header -->
+
+    <!-- header-bottom -->
+    <div class="header-bottom">
+        <div class="container">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">切换导航</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+                </div>
+                <!--/.navbar-header-->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="register.html">预约挂号</a></li>
+                        <li><a href="article.html">健康园地</a></li>
+                        <li><a href="announcement.html">新闻中心</a></li>
+                        <li><a href="contact.html">用户留言</a></li>
+                        <li><a href="login.html">登录注册</a></li>
+                    </ul>
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
+            <div class="search-box">
+                <div id="sb-search" class="sb-search">
+                    <form>
+                        <input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="sb-icon-search"> </span>
+                    </form>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+
+            <!-- search-scripts -->
+            <script src="js/classie.js"></script>
+            <script src="js/uisearch.js"></script>
+            <script>
+                new UISearch(document.getElementById('sb-search'));
+            </script>
+            <!-- //search-scripts -->
+
+        </div>
+    </div>
+    <!-- /header-bottom -->
+
+    <!-- header -->
+    <div class="content">
+        <div class="col-md-12 register_docter_login1">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 thumbnail register_docter_login2">
+                <h4 class="text-center" style="margin-top:10px; margin-bottom:10px; color:blue;">请先登录账号</h4>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="inputDoctor" class="col-sm-3 control-label">用户名</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="inputDoctor" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputSection" class="col-sm-3 control-label">密码</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="inputSection" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <a href="register_docter_detail.html" onclick="alert('登录成功！')" type="submit" class="btn btn-primary btn-search">登录</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-4"></div>
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h3 style="color:red;">注意：</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;◆使用网上医疗中的部分功能必须是广州市健康卡[旧称诊疗卡]用户（用户名：健康卡卡号 密码：健康卡密码）</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;◆如果您的健康卡没有开通网上服务功能将不能登录，请携带健康卡及有效证件到医院英东门诊楼一楼客服中心开通网上服务功能。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;◆如果您没有领取广州市健康卡，请携带有效证件到医院英东门诊楼一楼客服中心申领，并开通网上服务功能。</p>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+    </div>
+    <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 0;"></span> <span id="toTopHover" style="opacity: 0;"> </span></a>
+</body>
+
+</html>

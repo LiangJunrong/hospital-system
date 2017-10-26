@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>医生详细安排</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="hospital" />
+    <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1);
+        } </script>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!--webfonts-->
+    <link href='https://fonts.googleapis.com/css?family=Antic' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700|Six+Caps' rel='stylesheet'
+        type='text/css' />
+    <!--//webfonts-->
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!--light-box-files -->
+    <script src="js/modernizr.custom.97074.js"></script>
+    <script src="js/jquery.chocolat.js"></script>
+    <link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+
+    <script type="text/javascript" charset="utf-8">
+        $(function () {
+            $('.g-left a').Chocolat();
+        });
+    </script>
+    <!--light-box-files -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+			};
+			*/
+            $().UItoTop({ easingType: 'easeOutQuart' });
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- header -->
+
+    <!-- header-bottom -->
+    <div class="header-bottom">
+        <div class="container">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">切换导航</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+                </div>
+                <!--/.navbar-header-->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="register.html">预约挂号</a></li>
+                        <li><a href="article.html">健康园地</a></li>
+                        <li><a href="announcement.html">新闻中心</a></li>
+                        <li><a href="contact.html">用户留言</a></li>
+                        <li><a href="login.html">登录注册</a></li>
+                    </ul>
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
+            <div class="search-box">
+                <div id="sb-search" class="sb-search">
+                    <form>
+                        <input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="sb-icon-search"> </span>
+                    </form>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+
+            <!-- search-scripts -->
+            <script src="js/classie.js"></script>
+            <script src="js/uisearch.js"></script>
+            <script>
+                new UISearch(document.getElementById('sb-search'));
+            </script>
+            <!-- //search-scripts -->
+
+        </div>
+    </div>
+    <!-- /header-bottom -->
+
+    <!-- header -->
+    <div class="content">
+
+        <div class="col-md-12 column docter-search">
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                <h4 style="margin-top:10px; margin-bottom:10px; color:blue;">搜索医生/科室</h4>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="inputDoctor" class="col-sm-2 control-label">医生</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputDoctor" />
+                            <a href="register_docter.html" type="submit" class="btn btn-primary btn-search">搜索医生</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputSection" class="col-sm-2 control-label">科室</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputSection" />
+                            <a href="register_section.html" type="submit" class="btn btn-primary btn-search">搜索科室</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-7"></div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="text-center">
+                    <span class="text-danger">2017-10-24 (星期二)下午</span>
+                    <a href="#">梁峻荣</a>
+                    <span>医生的出诊计划明细</span>
+                    <hr/>
+                </div>
+                <table class="table table-bordered table-hover table-condensed text-center">
+                    <thead>
+                        <tr>
+                            <th class="text-center">时间</th>
+                            <th class="text-center">可预约人次</th>
+                            <th class="text-center">已预约人次</th>
+                            <th class="text-center">预 约</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>14:30 -- 15:29</td>
+                            <td>10</td>
+                            <td>4</td>
+                            <td><a href="register_docter_login.html">预约</a></td>
+                        </tr>
+                        <tr>
+                            <td>15:30 -- 16:29</td>
+                            <td>10</td>
+                            <td>0</td>
+                            <td><a href="#" onclick="alert('预约成功！口令为：8888')">预约</a></td>
+                        </tr>
+                        <tr>
+                            <td>16:30 -- 17:30</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td><a href="register_docter_login.html">预约</a></td>
+                        </tr>
+                        <tr>
+                            <td>合 计</td>
+                            <td>23</td>
+                            <td>4</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    </div>
+    <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 0;"></span> <span id="toTopHover" style="opacity: 0;"> </span></a>
+</body>
+
+</html>

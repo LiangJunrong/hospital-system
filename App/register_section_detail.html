@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>科室搜索结果页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="hospital" />
+    <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1);
+        } </script>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!--webfonts-->
+    <link href='https://fonts.googleapis.com/css?family=Antic' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700|Six+Caps' rel='stylesheet'
+        type='text/css' />
+    <!--//webfonts-->
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!--light-box-files -->
+    <script src="js/modernizr.custom.97074.js"></script>
+    <script src="js/jquery.chocolat.js"></script>
+    <link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+
+    <script type="text/javascript" charset="utf-8">
+        $(function () {
+            $('.g-left a').Chocolat();
+        });
+    </script>
+    <!--light-box-files -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+			/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+			};
+			*/
+            $().UItoTop({ easingType: 'easeOutQuart' });
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- header -->
+
+    <!-- header-bottom -->
+    <div class="header-bottom">
+        <div class="container">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">切换导航</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+                </div>
+                <!--/.navbar-header-->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="register.html">预约挂号</a></li>
+                        <li><a href="article.html">健康园地</a></li>
+                        <li><a href="announcement.html">新闻中心</a></li>
+                        <li><a href="contact.html">用户留言</a></li>
+                        <li><a href="login.html">登录注册</a></li>
+                    </ul>
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
+            <div class="search-box">
+                <div id="sb-search" class="sb-search">
+                    <form>
+                        <input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+                        <input class="sb-search-submit" type="submit" value="">
+                        <span class="sb-icon-search"> </span>
+                    </form>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+
+            <!-- search-scripts -->
+            <script src="js/classie.js"></script>
+            <script src="js/uisearch.js"></script>
+            <script>
+                new UISearch(document.getElementById('sb-search'));
+            </script>
+            <!-- //search-scripts -->
+
+        </div>
+    </div>
+    <!-- /header-bottom -->
+
+    <!-- header -->
+    <div class="content">
+
+        <div class="col-md-12 column docter-search">
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                <h4 style="margin-top:10px; margin-bottom:10px; color:blue;">搜索医生/科室</h4>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="inputDoctor" class="col-sm-2 control-label">医生</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputDoctor" />
+                            <a href="register_docter.html" type="submit" class="btn btn-primary btn-search">搜索医生</a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputSection" class="col-sm-2 control-label">科室</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputSection" />
+                            <a href="register_section.html" type="submit" class="btn btn-primary btn-search">搜索科室</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-7"></div>
+        </div>
+
+        <div class="col-md-12 column">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="text-center">
+                    <span class="text-danger">2017-10-17 至 2017-11-14 心血管  的医生出诊计划</span>
+                </div>
+                <table class="table table-bordered table-hover table-condensed">
+                    <tr>
+                        <th class="headerStyle">日期</th>
+                        <th class="headerStyle">时间段</th>
+                        <th class="headerStyle">挂号类型</th>
+                        <th class="headerStyle">医生</th>
+                        <th class="headerStyle">诊间</th>
+                        <th class="headerStyle">可挂号人次</th>
+                        <th class="headerStyle">已挂号人次</th>
+                        <th class="headerStyle">查看预约明细</th>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="middle" rowspan="6"><b>2017-10-18</b><br>(星期三)</td>
+                        <td rowspan="3">上午 </td>
+                        <td rowspan="2">副主任</td>
+                        <td><a href="#">梁峻荣</a></td>
+                        <td>二楼内科7诊间</td>
+                        <td>26</td>
+                        <td>26</td>
+                        <td><a href="register_docter_detail.html"
+                               >确定</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">刘城</a></td>
+                        <td>二楼内科12诊间</td>
+                        <td>36</td>
+                        <td>36</td>
+                        <td><a href="#">确定</a></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1">主任</td>
+                        <td><a href="#">罗义</a></td>
+                        <td>二楼内科8诊间</td>
+                        <td>22</td>
+                        <td>22</td>
+                        <td><a href="#">确定</a></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">下午 </td>
+                        <td rowspan="2">副主任</td>
+                        <td><a href="#">陈平安</a></td>
+                        <td>二楼内科7诊间</td>
+                        <td>23</td>
+                        <td>23</td>
+                        <td><a href="#">确定</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">李韶南</a></td>
+                        <td>二楼内科5诊间</td>
+                        <td>23</td>
+                        <td>23</td>
+                        <td><a href="#">确定</a></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1">主任</td>
+                        <td><a href="#">罗义</a></td>
+                        <td>二楼内科8诊间</td>
+                        <td>17</td>
+                        <td>17</td>
+                        <td><a href="#">确定</a></td>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="middle" rowspan="6"><b>2017-10-19</b><br>(星期四)</td>
+                        <td rowspan="2">上午 </td>
+                        <td rowspan="2">副主任</td>
+                        <td><a href="#">陈平安</a></td>
+                        <td>二楼内科7诊间</td>
+                        <td>26</td>
+                        <td>26</td>
+                        <td><a href="#">确定</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+    <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 0;"></span> <span id="toTopHover" style="opacity: 0;"> </span></a>
+</body>
+
+</html>

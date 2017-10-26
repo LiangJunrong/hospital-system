@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>挂号预约</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="hospital" />
+	<script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1);
+		} </script>
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<!-- Custom Theme files -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<!--webfonts-->
+	<link href='https://fonts.googleapis.com/css?family=Antic' rel='stylesheet' type='text/css' />
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700|Six+Caps' rel='stylesheet'
+	 type='text/css' />
+	<!--//webfonts-->
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<!--light-box-files -->
+	<script src="js/modernizr.custom.97074.js"></script>
+	<script src="js/jquery.chocolat.js"></script>
+	<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+
+	<script type="text/javascript" charset="utf-8">
+		$(function () {
+			$('.g-left a').Chocolat();
+		});
+	</script>
+	<!--light-box-files -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+			};
+			*/
+			$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
+
+</head>
+
+<body>
+	<!-- header -->
+
+	<!-- header-bottom -->
+	<div class="header-bottom">
+		<div class="container">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">切换导航</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<!--/.navbar-header-->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">首页</a></li>
+						<li><a href="register.html">预约挂号</a></li>
+						<li><a href="article.html">健康园地</a></li>
+						<li><a href="contact.html">用户留言</a></li>
+						<li><a href="login.html">登录注册</a></li>
+					</ul>
+				</div>
+				<!--/.navbar-collapse-->
+			</nav>
+			<div class="search-box">
+				<div id="sb-search" class="sb-search">
+					<form>
+						<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+						<input class="sb-search-submit" type="submit" value="">
+						<span class="sb-icon-search"> </span>
+					</form>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+
+			<!-- search-scripts -->
+			<script src="js/classie.js"></script>
+			<script src="js/uisearch.js"></script>
+			<script>
+				new UISearch(document.getElementById('sb-search'));
+			</script>
+			<!-- //search-scripts -->
+
+		</div>
+	</div>
+	<!-- /header-bottom -->
+
+	<!-- header -->
+	<div class="content">
+
+		<div class="col-md-12 column docter-search">
+			<div class="col-md-1"></div>
+			<div class="col-md-4 register-docter">
+				<h4 style="margin-top:10px; margin-bottom:10px; color:blue;">搜索医生/科室</h4>
+				<form class="form-horizontal" role="form">
+					<div class="form-group">
+						<label for="inputDoctor" class="col-sm-2 control-label">医生</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="inputDoctor" />
+							<a href="register_docter.html" type="submit" class="btn btn-primary btn-search">搜索医生</a>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputSection" class="col-sm-2 control-label">科室</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="inputSection" />
+							<a href="register_section.html" type="submit" class="btn btn-primary btn-search">搜索科室</a>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-7"></div>
+		</div>
+
+		<div class="col-md-12 column">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				<h4 style="margin-top:10px; margin-bottom:10px; color:blue;">门诊专科排班表</h4>
+				<table class="table table-bordered table-hover table-condensed">
+					<thead>
+						<tr>
+							<th>
+								院部
+							</th>
+							<th>
+								部门
+							</th>
+							<th colspan="3">
+								科室
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="44" style="vertical-align: middle !important;"><b>院本部</b></td>
+							<td rowspan="2" style="vertical-align: middle !important;"><b>广州消化疾病中心联合门诊</b></td>
+							<td><a href="#">消化内科</a></td>
+							<td><a href="#">胃肠外科</a></td>
+							<td><a href="#">肝胆外科</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">消内-粪菌移植门诊</a></td>
+							<td><a></a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="7" style="vertical-align: middle !important;"><b>内科</b></td>
+							<td><a href="#">呼吸</a></td>
+							<td><a href="#">心血管</a></td>
+							<td><a href="#">结构性心脏病门诊</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">周围血管疾病门诊</a></td>
+							<td><a href="#">心脏康复门诊</a></td>
+							<td><a href="#">血液</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">血液-兼红细胞疾病门诊</a></td>
+							<td><a href="#">血液-兼造血干细胞移植门诊</a></td>
+							<td><a href="#">血液-兼淋巴瘤/骨髓瘤门诊</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">血液-兼白血病门诊</a></td>
+							<td><a href="#">血液-兼出凝血疾病门诊</a></td>
+							<td><a href="#">血液-兼再生障碍性贫血</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">肾内</a></td>
+							<td><a href="#">血液透析专科门特门诊</a></td>
+							<td><a href="#">风湿免疫</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">腹膜透析专科门特门诊</a></td>
+							<td><a href="#">尿毒症综合门诊(门慢统筹)</a></td>
+							<td><a href="#">内分泌</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">内门</a></td>
+							<td><a href="#">心力衰竭门诊</a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>肿瘤专科门诊</b></td>
+							<td><a href="#">肿瘤科</a></td>
+							<td><a></a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="4" style="vertical-align: middle !important;"><b>外科</b></td>
+							<td><a href="#">甲状腺外科门诊</a></td>
+							<td><a href="#">乳腺外科门诊</a></td>
+							<td><a href="#">骨科(关节)</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">骨科(脊柱)</a></td>
+							<td><a href="#">骨科(创伤)</a></td>
+							<td><a href="#">泌尿外科</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">胸外科门诊</a></td>
+							<td><a href="#">烧伤外</a></td>
+							<td><a href="#">整形科门诊</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">外科门诊</a></td>
+							<td><a href="#">心脏大血管外科门诊</a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>男性专科</b></td>
+							<td><a href="#">男性专科</a></td>
+							<td><a></a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>妇产科</b></td>
+							<td><a href="#">妇门</a></td>
+							<td><a href="#">产科门诊</a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>儿科</b></td>
+							<td><a href="#">儿科急诊室</a></td>
+							<td><a href="#">儿门</a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>眼科</b></td>
+							<td><a href="#">眼门</a></td>
+							<td><a href="#">激光近视眼治疗中心</a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>耳鼻喉科</b></td>
+							<td><a href="#">耳鼻喉</a></td>
+							<td><a></a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>口腔科</b></td>
+							<td><a href="#">口腔</a></td>
+							<td><a></a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>皮肤科</b></td>
+							<td><a href="#">皮肤</a></td>
+							<td><a></a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>感染科(肝病门诊)</b></td>
+							<td><a href="#">肝病门</a></td>
+							<td><a href="#">肠道专科门诊</a></td>
+							<td><a href="#">发热门诊</a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>生殖医学中心</b></td>
+							<td><a href="#">生殖医学中心门诊</a></td>
+							<td><a></a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>急诊科</b></td>
+							<td><a href="#">急诊科</a></td>
+							<td><a></a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>麻醉科\疼痛科</b></td>
+							<td><a href="#">疼痛门诊</a></td>
+							<td><a></a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="2" style="vertical-align: middle !important;"><b>盘松楼涉外医疗点</b><br>(PWAUETU)</td>
+							<td><a href="#">市府医疗室</a></td>
+							<td><a href="#">人大医疗室</a></td>
+							<td><a href="#">市政协医疗点</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">市政务中心医疗点</a></td>
+							<td><a></a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>中医科</b></td>
+							<td><a href="#">中医内科</a></td>
+							<td><a href="#">正骨疮科</a></td>
+							<td><a href="#">针灸科</a></td>
+						</tr>
+						<tr>
+							<td rowspan="3" style="vertical-align: middle !important;"><b>脑系科</b></td>
+							<td><a href="#">脑内</a></td>
+							<td><a href="#">精神-临床心理门诊</a></td>
+							<td><a href="#">脑外</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">脑内-癫痫与热性惊厥门诊</a></td>
+							<td><a href="#">精神-睡眠障碍门诊</a></td>
+							<td><a href="#">精神-心境障碍门诊</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">脑内-运动障碍疾病门诊</a></td>
+							<td><a></a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>综合病科</b></td>
+							<td><a href="#">磐门</a></td>
+							<td><a href="#">老年护理门诊-磐松楼</a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>老年病专科门诊</b></td>
+							<td><a href="#">老年病专科门诊</a></td>
+							<td><a></a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="2" style="vertical-align: middle !important;"><b>门诊部</b></td>
+							<td><a href="#">本院在职职工门诊</a></td>
+							<td><a href="#">体检内科诊间</a></td>
+							<td><a href="#">本院退休职工门诊</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">测试科室</a></td>
+							<td><a></a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>特诊室</b></td>
+							<td><a href="#">特诊室</a></td>
+							<td><a></a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="3" style="vertical-align: middle !important;"><b>护理专科</b></td>
+							<td><a href="#">静脉导管护理门诊</a></td>
+							<td><a href="#">慢性伤口\造口处理门诊</a></td>
+							<td><a href="#">糖尿病护理专科门诊</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">老年病护理专科门诊</a></td>
+							<td><a href="#">新生儿护理门诊</a></td>
+							<td><a href="#">骨科护理门诊</a></td>
+						</tr>
+						<tr>
+							<td><a href="#">透析专科护理门诊</a></td>
+							<td><a href="#">消化疾病护理门诊</a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>离休门优门诊</b></td>
+							<td><a href="#">离休门优门诊</a></td>
+							<td><a></a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>康复医学科</b></td>
+							<td><a href="#">高压氧仓</a></td>
+							<td><a href="#">康复门诊</a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>核医学科(甲亢碘131)</b></td>
+							<td><a href="#">核医学科(甲亢碘131)</a></td>
+							<td><a></a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>营 养 科</b></td>
+							<td><a href="#">营养咨询专科</a></td>
+							<td><a></a></td>
+							<td><a></a></td>
+						</tr>
+						<tr>
+							<td rowspan="1" style="vertical-align: middle !important;"><b>介入放射门诊</b></td>
+							<td><a href="#">介入门诊</a></td>
+							<td><a></a></td>
+							<td><a></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+	</div>
+	<a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 0;"></span> <span id="toTopHover" style="opacity: 0;"> </span></a>
+</body>
+
+</html>
